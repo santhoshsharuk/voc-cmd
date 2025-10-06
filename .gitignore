@@ -1,3 +1,30 @@
-dist
-voxcmd.egg-info
-__pycache__
+# Build and distribution
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration
+.pypirc

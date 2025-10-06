@@ -1,15 +1,50 @@
-# In your pyproject.toml file
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "voxcmd"
-version = "1.2.0" # or whatever your version is
+version = "1.2.0"
+authors = [
+    {name = "Santhosh Sharuk", email = "santhoshsharuk16@gmail.com"},
+]
+description = "A powerful AI assistant and file manager for your terminal"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+keywords = ["ai", "assistant", "cli", "gemini", "file-manager", "terminal"]
 dependencies = [
-    "typer[all]",
-    "google-genai",
-    "rich",
-    # click and python-dotenv can be removed
+    "typer[all]>=0.9.0",
+    "google-generativeai>=0.3.0",
+    "rich>=13.0.0",
 ]
 
-# 👇 THIS IS THE LINE TO CHANGE 👇
+[project.urls]
+Homepage = "https://github.com/santhoshsharuk/voc-cmd"
+Repository = "https://github.com/santhoshsharuk/voc-cmd"
+Issues = "https://github.com/santhoshsharuk/voc-cmd/issues"
+Documentation = "https://github.com/santhoshsharuk/voc-cmd#readme"
+
 [project.scripts]
-voxcmd = "voxcmd:app" 
+voxcmd = "voxcmd:app"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+] 
