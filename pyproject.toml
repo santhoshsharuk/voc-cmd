@@ -1,9 +1,15 @@
+# In your pyproject.toml file
+
 [project]
 name = "voxcmd"
-version = "0.1.0"
+version = "1.2.0" # or whatever your version is
 dependencies = [
-    "click",
+    "typer[all]",
+    "google-genai",
+    "rich",
+    # click and python-dotenv can be removed
 ]
 
+# 👇 THIS IS THE LINE TO CHANGE 👇
 [project.scripts]
-voxcmd = "voxcmd:cli"
+voxcmd = "voxcmd:app" 
